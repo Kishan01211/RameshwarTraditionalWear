@@ -1,0 +1,141 @@
+/* Products page styling (previous version) */
+:root {
+  --rtwrs-brown: #6b4f2a;
+  --rtwrs-gold: #c8a74a;
+  --rtwrs-soft: #f7f7f5;
+}
+
+/* Page background */
+body {
+  background: var(--rtwrs-soft);
+}
+
+/* Card and image area */
+.product-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+  background: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+
+/* Image wrapper using Bootstrap ratio for consistent aspect */
+.product-thumb.ratio {
+  background: #eee;
+}
+
+/* Cover image within the ratio box */
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Title, price and badges */
+.product-title {
+  font-weight: 600;
+  color: #222;
+}
+
+.product-price {
+  color: var(--rtwrs-brown);
+  font-weight: 700;
+}
+
+.badge-new {
+  background-color: #e6f6eb;
+  color: #1e7e34;
+  border: 1px solid #bde5c6;
+  font-weight: 600;
+}
+
+.badge-stock {
+  background-color: #fff7e6;
+  color: #b36b00;
+  border: 1px solid #ffe0a3;
+  font-weight: 600;
+}
+
+/* Empty state */
+.no-products {
+  text-align: center;
+  padding: 80px 0;
+  color: #777;
+}
+
+.no-products i {
+  font-size: 48px;
+  margin-bottom: 12px;
+  color: var(--rtwrs-gold);
+  opacity: 0.75;
+}
+
+/* Modal images */
+#modalCarousel .carousel-inner img {
+  max-height: 70vh;
+  object-fit: contain;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Small tweaks */
+@media (max-width: 576px) {
+  .product-title { font-size: 0.95rem; }
+  .product-price { font-size: 1rem; }
+}
+
+/* --- Neat & Clean page polish to match footer --- */
+.filter-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  padding: 16px;
+}
+
+.filter-section h5 {
+  font-weight: 700;
+  color: var(--rtwrs-brown);
+}
+
+.filter-section .form-label {
+  color: #333;
+}
+
+/* Top heading and sort row spacing */
+.container > .row .mb-4 h2 {
+  color: var(--rtwrs-brown);
+  font-weight: 700;
+}
+
+/* Product card tidy spacing */
+#products .product-card {
+  border: 1px solid #eee;
+}
+
+#products .card-body {
+  padding: 10px 12px;
+}
+
+/* Price highlight tone to match theme */
+.text-brown { color: var(--rtwrs-brown); }
+
+/* Buttons alignment with theme */
+.btn-primary {
+  background-color: var(--rtwrs-brown);
+  border-color: var(--rtwrs-brown);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #583f21;
+  border-color: #583f21;
+}
+
+/* Empty state spacing tuned */
+.no-products {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}

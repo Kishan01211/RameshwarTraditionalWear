@@ -1,0 +1,197 @@
+/* Reset all possible spacing for full screen hero */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    line-height: 1;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    line-height: 1;
+    position: relative;
+}
+
+/* Remove any container spacing that might affect hero */
+.container-fluid {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Eliminate any potential bottom spacing */
+.hero-section::before,
+.hero-section::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Force hero to cover bottom edge completely */
+.hero-section {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+/* Ensure no spacing from Bootstrap or other frameworks */
+.hero-section.container,
+.hero-section .container,
+.hero-section .container-fluid,
+.hero-section .row,
+.hero-section .col {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+}
+
+
+/* Hero Section with Image Slider - Full Screen */
+.hero-section {
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile */
+    width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+    background: #181831;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    z-index: 1000;
+    transform: translate3d(0, 0, 0);
+    display: block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.hero-bg-image {
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 1s cubic-bezier(.42,.58,.29,1);
+    z-index: 1;
+    will-change: opacity, background-image;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-overlay {
+    position: absolute; 
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(105deg, rgba(38,25,61,.72) 65%, rgba(184,138,58,.33) 100%);
+    z-index: 2;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0;
+    text-shadow: 0 4px 44px rgba(0,0,0,0.23);
+    animation: heroFadeIn 1.2s;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes heroFadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(60px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1 {
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: #fff !important;
+}
+
+.hero-btn {
+    padding: 0.9em 2.2em;
+    border-radius: 999px;
+    font-size: 1.3rem;
+    transition: background .23s, box-shadow .19s, transform .12s;
+}
+
+/* Force hero subtitle/lead to white for readability */
+.hero-content .lead,
+.hero-content p {
+    color: #fff !important;
+}
+
+.hero-btn:hover {
+    background: #8B4513 !important;
+    color: #fff !important;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 22px 0 #b48a3a44;
+}
+
+/* Responsive design */
+@media (max-width: 880px) {
+    .hero-content { 
+        max-width: 92vw; 
+        padding: 0;
+    }
+    .hero-section { 
+        min-height: 100vh;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 599px) {
+    .hero-content h1 { 
+        font-size: 1.5rem;
+    }
+    .hero-section { 
+        min-height: 100vh;
+        height: 100vh;
+    }
+    .hero-bg-image { 
+        background-position: right 30% center;
+    }
+}

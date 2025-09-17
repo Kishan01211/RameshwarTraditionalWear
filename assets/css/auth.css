@@ -1,0 +1,95 @@
+/* Auth pages shared styles: gradient background + glassmorphism card */
+
+:root {
+  --primary-bg1: #ffffff;
+  --primary-bg2: #ffffff;
+  /* Brand accent aligned with site (brown) */
+  --accent: #8B5E34;
+  --accent-hover: #6F4B29;
+  --white-15: rgba(255, 255, 255, 0.15);
+  --white-7: rgba(255, 255, 255, 0.07);
+  --shadow: rgba(0, 0, 0, 0.10);
+  --text-color: #1f2937; /* gray-800 */
+}
+
+html, body {
+  height: 100%;
+}
+
+body.auth-page {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+/* animation removed for static background */
+
+.auth-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 0; /* flat */
+  box-shadow: 0 8px 20px var(--shadow);
+  border: 1px solid #e5e7eb; /* gray-200 */
+  width: 95%;
+  max-width: 380px;
+  color: var(--text-color);
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin: 0 0 16px 0;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+.auth-alert {
+  padding: 10px 12px;
+  border-radius: 0; /* flat */
+  margin-bottom: 12px;
+  font-size: 14px;
+  border: 1px solid transparent;
+}
+.auth-alert.success { background: rgba(46, 204, 113, 0.2); color: #bff2d3; border-color: rgba(46,204,113,.35); }
+.auth-alert.error { background: rgba(231, 76, 60, 0.2); color: #ffd0cc; border-color: rgba(231,76,60,.35); }
+
+.auth-input { margin-bottom: 16px; }
+.auth-input input, .auth-input textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #e5e7eb; /* gray-200 */
+  outline: none;
+  border-radius: 0; /* flat */
+  font-size: 15px;
+  background: #f8fafc; /* gray-50 */
+  color: var(--text-color);
+  transition: box-shadow 0.2s, border-color 0.2s, background-color 0.2s;
+}
+.auth-input input::placeholder, .auth-input textarea::placeholder { color: #999; }
+.auth-input input:focus, .auth-input textarea:focus {
+  border-color: var(--accent);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(139, 94, 52, 0.15); /* brown glow */
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 0; /* flat */
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.2s;
+}
+.auth-btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+.auth-links { text-align: center; margin-top: 12px; font-size: 14px; }
+.auth-links a { color: var(--accent); text-decoration: none; }
+.auth-links a:hover { color: var(--accent-hover); }

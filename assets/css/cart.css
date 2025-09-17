@@ -1,0 +1,43 @@
+/* Cart page specific styles */
+
+.cart-page {
+  padding-top: 0.5rem;
+}
+
+.cart-table {
+  width: 100%;
+}
+
+/* Larger, full-image display; preserve aspect ratio */
+.cart-thumb {
+  width: 240px;
+  min-width: 240px;
+}
+.cart-thumb .cart-image {
+  width: 240px;
+  height: 300px; /* larger, consistent box */
+  object-fit: contain; /* show full image without cropping */
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.cart-item-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Tighten columns on small screens */
+/* Top-align table cells so names sit beside taller images */
+.cart-table table td { vertical-align: top; }
+
+@media (max-width: 992px) {
+  .cart-thumb { width: 200px; min-width: 200px; }
+  .cart-thumb .cart-image { width: 200px; height: 250px; }
+}
+
+@media (max-width: 576px) {
+  .cart-thumb { width: 150px; min-width: 150px; }
+  .cart-thumb .cart-image { width: 150px; height: 190px; }
+}

@@ -1,0 +1,62 @@
+REQUIRED IMAGE FILES FOR HERO SECTION
+=====================================
+
+1. hero-poster.jpg
+   - Format: JPG
+   - Resolution: 1920x1080 pixels (Full HD)
+   - Quality: High (80-90% compression)
+   - Content: Traditional Indian wear showcase
+   - Style: Professional, elegant presentation
+   - Colors: Rich, warm colors (browns, golds, deep reds)
+   - Examples: Beautiful display of sherwanis, kurtas, traditional outfits
+   - File size: 200-500 KB (optimized for web)
+   - Purpose: Fallback image when video doesn't load
+
+WHERE TO GET THESE FILES:
+========================
+
+Option 1: Stock Photo Sites
+- Shutterstock.com
+- Getty Images
+- Adobe Stock
+- Unsplash.com (free - check commercial license)
+- Pexels.com (free)
+
+Search terms:
+- "Indian traditional clothing"
+- "Sherwani collection"
+- "Traditional Indian menswear"
+- "Ethnic wear display"
+- "Indian wedding attire"
+- "Traditional kurta"
+
+Option 2: Create Your Own
+- Photograph your rental collection
+- Professional lighting setup
+- Clean, elegant background
+- High-resolution camera
+- Models wearing your outfits
+
+RECOMMENDED SPECIFICATIONS:
+==========================
+- Aspect ratio: 16:9 (widescreen)
+- Colors: Warm, traditional palette
+- Style: Premium, luxury feel
+- Composition: Centered, balanced
+- Quality: Sharp, professional
+
+QUICK TEMPORARY SOLUTION:
+========================
+For immediate testing, you can:
+1. Search "traditional indian wear" on Unsplash.com
+2. Download a high-quality image
+3. Rename it to "hero-poster.jpg"
+4. Place it in /rtwrs_web/assets/images/
+
+IMPORTANT NOTES:
+===============
+- Ensure proper licensing for commercial use
+- Image should represent your brand quality
+- Test loading speed and visual impact
+- Consider your target audience
+- Match your website's color scheme
